@@ -1,5 +1,7 @@
 import { defaultFont } from '@/lib/fonts'
 import { cn } from '@/lib/utils'
+import Nav from '@/components/Nav'
+
 import '@/styles/globals.scss'
 
 export const metadata = {
@@ -25,7 +27,10 @@ export default function RootLayout({
 					defaultFont.variable
 				)}
 			>
-				{children}
+				<Nav />
+				<main className="w-full pl-[8.5rem]">
+					<div className="w-full px-6">{children}</div>
+				</main>
 			</body>
 		</html>
 	)
